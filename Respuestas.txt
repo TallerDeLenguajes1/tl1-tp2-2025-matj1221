@@ -1,0 +1,17 @@
+1, f)
+
+¿Puede ver el archivo tp2_1_2.c? ¿Por qué?
+
+
+No, el archivo tp2_1_2.c no lo veremos en la rama main porque fue creado en la rama Opcion_2
+Cada rama mantiene sus propios cambios hasta que se realiza un merge con main
+
+
+En VSCode vuelva al "Source Control" ¿Qué diferencias nota?
+
+Las diferencias que noto es que Respuestas.txt aparece como un cambio nuevo en la rama main, pero los cambios realizados en Opcion_2 aún no están en main. También se verá que hay commits diferentes en cada rama
+
+
+En VSCode vuelva al "Source Control" vea los cambios, ¿Qué nota?
+
+Ahora main incluirá los cambios de Opcion_2, por lo que tp2_1_2.c aparecerá en la rama main
