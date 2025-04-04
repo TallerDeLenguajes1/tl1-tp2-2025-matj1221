@@ -19,6 +19,7 @@ char tipos[6][10] = {"Intel", "AMD", "Celeron", "Athlon", "Core", "Pentium"};
 
 void listarPCS(compu pcs[]);
 void mostrarMasVieja(compu pcs[]);
+void mostrarMasVeloz(compu pcs[]);
 
 int main() {
     srand(time(NULL));
@@ -37,6 +38,8 @@ int main() {
 
     // muestro la pc mas vieja
     mostrarMasVieja(pcs);
+    // muestro la pc mas rapida
+    mostrarMasVeloz(pcs);
 
     return 0;
 }
@@ -69,4 +72,23 @@ void mostrarMasVieja(compu pcs[]) {
     printf("Anio: %i\n", pcs[indexVieja].anio);
     printf("Cantidad de nucleos: %i\n", pcs[indexVieja].cantidad_nucleos);
     printf("Tipo de CPU: %s\n", pcs[indexVieja].tipo_cpu);
+}
+
+void mostrarMasVeloz(compu pcs[]) {
+    int i, max = 0, indexVeloz;
+
+    for (i = 0; i < N; i++) {
+        if (pcs[i].velocidad > max) {
+            max = pcs[i].velocidad;
+            indexVeloz = i;
+        }
+    }
+
+    printf("\n\n----------------------------\nLa PC mas rapida es: \n");
+
+    printf("PC: %i\n", indexVeloz + 1);
+    printf("Velocidad: %i GHz\n", pcs[indexVeloz].velocidad);
+    printf("Anio: %i\n", pcs[indexVeloz].anio);
+    printf("Cantidad de nucleos: %i\n", pcs[indexVeloz].cantidad_nucleos);
+    printf("Tipo de CPU: %s\n", pcs[indexVeloz].tipo_cpu);
 }
